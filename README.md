@@ -12,9 +12,11 @@ On constate qu'il est supprimé
 ## Ajout d'une pharmacie
 ![image](https://github.com/iir-projets/rest-api-2-mayss14/assets/96689689/4340101b-c5a5-484b-8f83-9981ebc67db3)
 
-![image](https://github.com/iir-projets/rest-api-2-mayss14/assets/96689689/8e885e8d-7459-458d-952b-c19076aabaaf)
+![image](https://github.com/iir-projets/rest-api-2-mayss14/assets/96689689/2a6b44a5-e87d-4d13-ab94-0c144a40653f)
+
 
 ![image](https://github.com/iir-projets/rest-api-2-mayss14/assets/96689689/f650fcab-23e4-40d9-82a4-ff95cf5aa7d2)
 
 # Details d'une pharmacie
-![Uploading image.png…]()
+![image](https://github.com/iir-projets/rest-api-2-mayss14/assets/96689689/4302fa29-56da-4eac-8cb8-6ab9ab0e3432)
+
