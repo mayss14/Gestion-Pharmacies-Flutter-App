@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pharmacies 2023',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 42, 114, 123)),
         useMaterial3: true,
       ),
       home: PharmaciesEcran(),

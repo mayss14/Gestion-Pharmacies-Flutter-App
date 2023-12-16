@@ -6,23 +6,42 @@ class PharmacieService {
   final String baseUrl = 'http://localhost:3000/pharmacies';
 
   Future<List<Pharmacie>> chargerPharmacies() async {
-    try {
-      final reponse = await http.get(Uri.parse(baseUrl));
+    final reponse = await http.get(Uri.parse(baseUrl));
 
-      if (reponse.statusCode == 200) {
-        final List<dynamic> donnees = json.decode(reponse.body);
-        return donnees.map((json) => Pharmacie.fromJson(json)).toList();
+    final List<dynamic> donnees = json.decode(reponse.body);
+    return donnees.map((json) => Pharmacie.fromJson(json)).toList();
+  }
+
+// Ajouter les méthodes creerPharmacie et supprimerPharmacie
+  Future<Pharmacie> creerPharmacie(Pharmacie pharmacie) async {
+    try {
+      final reponse = await http.post(
+        Uri.parse(baseUrl),
+        headers: {
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonEncode(pharmacie.toJson()),
+      );
+
+      if (reponse.statusCode == 201) {
+        return Pharmacie.fromJson(jsonDecode(reponse.body));
       } else {
-        throw Exception('Échec du chargement des pharmacies');
+        throw Exception('Échec de la création de la pharmacie');
       }
     } catch (e) {
       throw Exception('Une erreur s\'est produite: $e');
     }
   }
-// Ajouter les méthodes creerPharmacie et supprimerPharmacie
-  /* Future<Pharmacie> creerPharmacie(Pharmacie pharmacie) async {
-    
-  }*/
 
-  Future<void> supprimerPharmacie(String id) async {}
+  Future<void> supprimerPharmacie(String id) async {
+    try {
+      final reponse = await http.delete(Uri.parse('$baseUrl/$id'));
+
+      if (reponse.statusCode != 200) {
+        throw Exception('Échec de la suppression de la pharmacie');
+      }
+    } catch (e) {
+      throw Exception('Une erreur s\'est produite: $e');
+    }
+  }
 }
