@@ -29,8 +29,8 @@ class Pharmacie {
       : id = json['id'],
         nom = json['fields']['pharmacie'],
         quartier = json['fields']['quartier'],
-        //latitude = double.parse(json['fields']['latitude']),
-        //longitude = double.parse(json['fields']['longitude']),
+        latitude = json['geometry']['coordinates'][1],
+        longitude = json['geometry']['coordinates'][0],
         image = json['fields']['image'],
         horaire = json['fields']['horaires_d_ouverture'],
         adresse = json['fields']['adresse'],
@@ -39,10 +39,13 @@ class Pharmacie {
   Map<String, dynamic> toJson() => {
         "id": id,
         "fields": {
-          "pharmacie": nom, "quartier": quartier,
-          //"latitude": latitude.toString(), "longitude": longitude.toString(),
+          "pharmacie": nom,
+          "quartier": quartier,
+          "latitude": latitude,
+          "longitude": longitude,
           "image": image,
-          "horaires_d_ouverture": horaire, "adresse": adresse,
+          "horaires_d_ouverture": horaire,
+          "adresse": adresse,
           "contact": telephone
         },
       };

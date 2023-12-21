@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pharmacies_2023/models/pharmacie.dart';
 import 'package:flutter_pharmacies_2023/services/pharmacie_service.dart';
 import 'package:flutter_pharmacies_2023/ui/addPhar.dart';
+import 'package:flutter_pharmacies_2023/ui/card.dart';
 import 'package:flutter_pharmacies_2023/ui/detail.dart';
 
 class PharmaciesEcran extends StatefulWidget {
@@ -65,6 +66,23 @@ class _PharmaciesEcranState extends State<PharmaciesEcran> {
             fontFamily: 'Robboto',
           ),
         ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 28.0),
+            child: IconButton(
+                onPressed: () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Card0(pharmacies: _pharmacies),
+                        ),
+                      )
+                    },
+                icon: Icon(Icons.map),
+                iconSize: 30.0,
+                color: Color.fromARGB(255, 219, 234, 236)),
+          ),
+        ],
       ),
       body: FutureBuilder<List<Pharmacie>>(
         future: chargerPharmacies(),
@@ -87,7 +105,7 @@ class _PharmaciesEcranState extends State<PharmaciesEcran> {
               itemCount: _pharmacies.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(18.0),
                   child: Container(
                     decoration: BoxDecoration(
                       border: Border.all(

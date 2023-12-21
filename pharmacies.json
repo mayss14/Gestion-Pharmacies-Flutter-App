@@ -265,54 +265,6 @@
         ]
       },
       "record_timestamp": "2021-04-26T12:06:32.173+02:00"
-    },
-    {
-      "id": "dc53d0eb-2bdb-430c-bc25-f715478d5e7a",
-      "fields": {
-        "pharmacie": "pharmacie izdihar",
-        "quartier": "Izdihar",
-        "latitude": 10,
-        "longitude": 10,
-        "image": "img",
-        "horaires_d_ouverture": "122",
-        "adresse": "xxx",
-        "contact": "097386873"
-      }
-    },
-    {
-      "id": "f1803eb1-dbb2-450c-8ff6-382994e48ec5",
-      "fields": {
-        "pharmacie": "ddd",
-        "quartier": "aaa",
-        "latitude": 10,
-        "longitude": 10,
-        "image": "img",
-        "horaires_d_ouverture": "122",
-        "adresse": "xxx",
-        "contact": "097386873"
-      }
-    },
-    {
-      "id": "f43473a1-e167-491c-bbc6-8dadc6974d1d",
-      "fields": {
-        "pharmacie": "Phamra gueliz",
-        "quartier": "gueliz",
-        "image": "img",
-        "horaires_d_ouverture": "122",
-        "adresse": "xxx",
-        "contact": "097386873"
-      }
-    },
-    {
-      "id": "07aca533-f60c-4318-8bb3-3d346e22c54e",
-      "fields": {
-        "pharmacie": "Pharmacie Assif",
-        "quartier": "Assif allal alfassi",
-        "image": "img",
-        "horaires_d_ouverture": "122",
-        "adresse": "xxx",
-        "contact": "097386873"
-      }
     }
   ]
 }
