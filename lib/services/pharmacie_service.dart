@@ -3,7 +3,7 @@ import 'package:flutter_pharmacies_2023/models/pharmacie.dart';
 import 'package:http/http.dart' as http;
 
 class PharmacieService {
-  final String baseUrl = 'http://localhost:3000/pharmacies';
+  final String baseUrl = 'http://192.168.1.37:3000/pharmacies';
 
   Future<List<Pharmacie>> chargerPharmacies() async {
     final reponse = await http.get(Uri.parse(baseUrl));
